@@ -1,4 +1,3 @@
-import './App.css'
 import {HomepageComponent} from './components/home/HomepageComponent'
 function App() {
 
