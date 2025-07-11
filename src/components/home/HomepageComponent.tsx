@@ -1,12 +1,10 @@
 import React from 'react';
 
 
-export default class HomepageComponent extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Welcome to the Homepage!</h1>
-            </div>
-        );
-    }
+export const HomepageComponent = () => {
+  return (
+      <div className='flex justify-center'>
+          <h1>Thanks for giving me a chance :)</h1>
+      </div>
+  );
 }
