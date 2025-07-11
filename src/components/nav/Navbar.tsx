@@ -5,7 +5,9 @@ export const Navbar = () => {
     <nav className="bg-gray-800 p-4">
       <div className="m-auto flex justify-between items-center">
         <div className="text-white text-xl font-bold">
-          Flashlight Takehome Assesment
+          <Link to='/'>
+            Flashlight Takehome Assesment
+          </Link>
         </div>
         
         <div className="flex space-x-6">
