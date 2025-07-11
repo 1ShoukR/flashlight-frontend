@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 export const Navbar = () => {
   return (
@@ -8,9 +9,9 @@ export const Navbar = () => {
         </div>
         
         <div className="flex space-x-6">
-          <a href="/students" className="text-white hover:text-gray-300 transition-colors">
+          <Link to="/students" className="text-white hover:text-gray-300 transition-colors">
             Students
-          </a>
+          </Link>
           <a href="/create" className="text-white hover:text-gray-300 transition-colors">
             Create
           </a>
