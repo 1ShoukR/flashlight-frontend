@@ -1,7 +1,14 @@
-export const StudentCard = () => {
+export const StudentCard = ({ student } : { student: {
+  StudentID: number;
+  Name: string;
+  Grade: number;
+} }) => {
+  
   return (
     <div>
-      student card
+      <div>
+        {student.Name}
+      </div>
     </div>
   )
 }
