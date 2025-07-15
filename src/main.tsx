@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import { StudentComponent } from './components/student/StudentComponent.tsx'
 import { Navbar } from './components/nav/Navbar.tsx'
+import { CreateStudentComponent } from './components/student/CreateStudentComponent.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')!).render(
     <Routes>
       <Route path='/' element={<App />} />
       <Route path='/students' element={<StudentComponent />} />
+      <Route path='/create' element={<CreateStudentComponent />} />
     </Routes>
   </BrowserRouter>,
 )
