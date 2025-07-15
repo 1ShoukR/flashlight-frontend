@@ -25,7 +25,7 @@ export const StudentComponent = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('https://heartfelt-happiness-production.up.railway.app/api/students/all'); // Adjust the URL to match your backend
+      const response = await fetch('https://heartfelt-happiness-production.up.railway.app/api/students/all'); 
       const data: StudentsResponse = await response.json();
       console.log('data', data)
       if (data.error) {
