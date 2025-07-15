@@ -1,70 +1,132 @@
-# React + TypeScript + Vite
+# Flashlight Learning - Student Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based student management application built as a takehome project for Flashlight Learning.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Frontend:** Hosted on [Railway Cloud Services](https://railway.app)  
+**Backend API:** https://heartfelt-happiness-production.up.railway.app
 
-## Expanding the ESLint configuration
+## 🛠️ Technology Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+- **React 19** - Modern React with latest features
+- **TypeScript** - Type-safe JavaScript development
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS 4.1** - Utility-first CSS framework
+- **React Router 7** - Client-side routing
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Development Tools
+- **ESLint** - Code linting and formatting
+- **TypeScript ESLint** - TypeScript-specific linting rules
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📋 What This App Does
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This is a simple student management system that allows users to:
+
+### ✨ Features
+- **View Students** - Display all students in a responsive card-based grid layout
+- **Create Students** - Add new students with their name and grade (1-12)
+
+### 🎯 User Interface
+- Clean, modern design with Tailwind CSS
+- Intuitive navigation between viewing and creating students
+- Loading states and error handling
+- Form validation for student creation
+
+## 🚀 How to Run Locally
+
+### Prerequisites
+- **Node.js** (version 16 or higher)
+- **npm** or **yarn** package manager
+
+### Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/1ShoukR/flashlight-frontend.git
+   cd flashlight_frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   - Navigate to `http://localhost:5173`
+   - The app will automatically reload when you make changes
+
+### Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build production-ready application |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint to check code quality |
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── home/
+│   │   └── HomepageComponent.tsx     # Landing page
+│   ├── nav/
+│   │   └── Navbar.tsx                # Navigation component
+│   └── student/
+│       ├── CreateStudentComponent.tsx # Form to create students
+│       ├── StudentCard.tsx           # Individual student display
+│       └── StudentComponent.tsx      # Students list view
+├── assets/                           # Static assets
+├── App.tsx                          # Main application component
+├── main.tsx                         # Application entry point
+└── index.css                        # Global styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔗 API Integration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The frontend connects to a Railway-hosted backend API:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# flashlight-frontend
+- **Base URL:** `https://heartfelt-happiness-production.up.railway.app`
+- **Get All Students:** `GET /api/students/all`
+- **Create Student:** `POST /api/students/create`
+
+### API Data Format
+```typescript
+interface Student {
+  StudentID: number;
+  Name: string;
+  Grade: number;
+  }
+  ```
+
+## 🚀 Future Features
+
+Irecognize you guys wanted strictly boiler plate code here, but I could not hold myself back with this much time in between our interviews. I love building, and I cannot leave something unfinished, so I followed the rubric all the way to the end. I added this section about some ideas I had while iterating, so that we could definitely talk about this more together. I appreciate you guys giving me the opportunity to showcase my abilities!
+
+- **JWT-based Authentication** - Secure login system with role-based access control
+- **Multi-tenant Architecture** - Support for multiple schools/districts with data isolation
+- **Auth Levels Integration** - Differnet auth levels for different staff
+
+- **Student Assignment History** - Support seeing older assignemnts for each student
+- **Differnet Classes** - Support the addition of adding students to "classes"
+- **Export Capabilities** - PDF reports, CSV exports, and other various data points for students and their future classes and such
+
+- **Push Notification System** - Notification system for various important updates, such as new assignments, grades, classes, etc.
+- **Dark/Light Theme Toggle** - User preference system with system theme detection
+- **Search & Filtering** - Search ability in students view to filter students out
+
+- **Bulk Operations** - Multi-select actions for efficient data management
+- **Redis Caching** - Performance optimization for frequently accessed data
+- **Docker Containerization** - Consistent deployment across environments (Not needed really, but it is standard to Go environments.)
+
+---
+
+**Built with ❤️ for Flashlight Learning**
