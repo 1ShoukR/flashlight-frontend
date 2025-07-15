@@ -10,7 +10,7 @@ export const CreateStudentComponent = (): React.JSX.Element => {
     e.preventDefault();
     
     try {
-      const response = await fetch("http://localhost:8080/api/students/create", {
+      const response = await fetch("https://heartfelt-happiness-production.up.railway.app/api/students/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
