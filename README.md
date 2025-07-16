@@ -5,11 +5,12 @@ A React-based student management application built as a takehome project for Fla
 ## 🌐 Live Demo
 
 **Frontend:** Hosted on [Railway Cloud Services](https://railway.app)  
-**Backend API:** https://heartfelt-happiness-production.up.railway.app
+**Backend API:** <https://heartfelt-happiness-production.up.railway.app>
 
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - **React 19** - Modern React with latest features
 - **TypeScript** - Type-safe JavaScript development
 - **Vite** - Fast build tool and development server
@@ -17,6 +18,7 @@ A React-based student management application built as a takehome project for Fla
 - **React Router 7** - Client-side routing
 
 ### Development Tools
+
 - **ESLint** - Code linting and formatting
 - **TypeScript ESLint** - TypeScript-specific linting rules
 
@@ -25,10 +27,12 @@ A React-based student management application built as a takehome project for Fla
 This is a simple student management system that allows users to:
 
 ### ✨ Features
+
 - **View Students** - Display all students in a responsive card-based grid layout
 - **Create Students** - Add new students with their name and grade (1-12)
 
 ### 🎯 User Interface
+
 - Clean, modern design with Tailwind CSS
 - Intuitive navigation between viewing and creating students
 - Loading states and error handling
@@ -37,23 +41,27 @@ This is a simple student management system that allows users to:
 ## 🚀 How to Run Locally
 
 ### Prerequisites
+
 - **Node.js** (version 16 or higher)
 - **npm** or **yarn** package manager
 
 ### Installation & Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/1ShoukR/flashlight-frontend.git
    cd flashlight_frontend
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -99,6 +107,7 @@ The frontend connects to a Railway-hosted backend API:
 - **Create Student:** `POST /api/students/create`
 
 ### API Data Format
+
 ```typescript
 interface Student {
   StudentID: number;
@@ -129,4 +138,4 @@ Irecognize you guys wanted strictly boiler plate code here, but I could not hold
 
 ---
 
-**Built with ❤️ for Flashlight Learning**
+Built with ❤️ for Flashlight Learning
